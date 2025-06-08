@@ -1,4 +1,4 @@
-import { Component, ContentChild, AfterContentInit, ElementRef } from '@angular/core';
+import { Component, ContentChild, AfterContentInit, ElementRef, QueryList, ContentChildren} from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -7,8 +7,12 @@ import { Component, ContentChild, AfterContentInit, ElementRef } from '@angular/
 })
 export class ChildComponent implements AfterContentInit {
   @ContentChild('refSportsTitle') refSports !: ElementRef | undefined
+  @ContentChildren('refSports') refNewSportsIntroduced !:QueryList<ElementRef>;
   ngAfterContentInit(): void {
     console.log(this.refSports?.nativeElement.innerText)
+    this.refNewSportsIntroduced.forEach((p,i)=>{
+        console.log(p.nativeElement.innerText);
+    });
   }
 
 }
