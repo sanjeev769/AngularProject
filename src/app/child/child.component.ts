@@ -8,6 +8,7 @@ import { Component, ContentChild, AfterContentInit, ElementRef, QueryList, Conte
 export class ChildComponent implements AfterContentInit {
   @ContentChild('refSportsTitle') refSports !: ElementRef | undefined
   @ContentChildren('refSports') refNewSportsIntroduced !:QueryList<ElementRef>;
+  
   ngAfterContentInit(): void {
     console.log(this.refSports?.nativeElement.innerText)
     this.refNewSportsIntroduced.forEach((p,i)=>{

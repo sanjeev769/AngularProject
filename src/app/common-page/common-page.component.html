@@ -1,0 +1,22 @@
+<div class="toggle-panel">
+
+    <!-- Header -->
+    <div class="toggle-panel-header" (click)="toggle()">
+        <ng-content select="[appTogglePanelHeader]">
+
+        </ng-content>
+        
+       
+    </div>
+    <!-- Main Body -->
+    <div class="toggle-panel-body" *ngIf="isOpen">
+        <ng-content></ng-content>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="toggle-panel-footer" *ngIf="hasFooter">
+        <ng-content select="[appTogglePanelFooter]">
+
+        </ng-content>
+    </div>
+</div>

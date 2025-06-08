@@ -1,0 +1,26 @@
+.toggle-panel {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .toggle-panel-header {
+    background-color: #f5f5f5;
+    padding: 12px 16px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    top: 0;
+  }
+  
+  .toggle-panel-body {
+    padding: 16px;
+  }
+  /* toggle-panel.component.css */
+.toggle-panel-footer {
+    background-color: #f5f5f5;
+    padding: 10px 16px;
+    border-top: 1px solid #ddd;
+    font-weight: bold;
+  }
