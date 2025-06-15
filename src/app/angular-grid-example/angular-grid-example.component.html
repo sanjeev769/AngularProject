@@ -1,0 +1,12 @@
+<div class="ag-theme-alpine" style="height: 400px; width: 100%;">
+    <ag-grid-angular
+    style="height: 400px; width: 100%;"  
+    [rowData]="rowData"
+      [columnDefs]="columnDefs"
+      [defaultColDef]="defaultColDef"
+      rowSelection="single"
+      [animateRows]="true"
+      (cellValueChanged)="onCellValueChanged($event)"
+      >
+    </ag-grid-angular>
+  </div>

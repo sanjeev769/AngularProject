@@ -1,0 +1,24 @@
+<form [formGroup]="CountryStateForm">
+
+    <p>Name</p>
+    <div><input type="text" name="name" formControlName="name"></div>
+    <p><span>Country:</span>
+        <span>
+            <select name="country" id="country" (change)="PopulateState($event)" formControlName="country">
+                <option value="-1">Select</option>
+                <option *ngFor="let item of countryList" [value]="item.code">
+                {{item.name}}
+                </option>
+            </select>
+        </span> </p>
+        <p>States
+            <select name="states"  formControlName="states" 
+            id="states">
+            <option value="-1">Select</option>
+            <option *ngFor="let statesInfo of stateList" [value]="statesInfo.code">
+                {{statesInfo.name}}        
+        </option>
+        </select>
+        </p>
+        {{this.CountryStateForm.value.name}}
+</form>

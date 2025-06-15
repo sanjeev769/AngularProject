@@ -1,0 +1,10 @@
+<form [formGroup]="loginForms" (ngSubmit)="SubmitLogin()">
+    <p>Name</p>
+    <p><input type="text" formControlName="txtName"></p>
+    <span *ngIf="ValidateName() ?.invalid" style="color:red;font-size: small;">User Name is required</span>
+    <p>Email</p>
+    <p><input type="text" formControlName="txtEmail"></p>
+    <span *ngIf="ValidateEmail()?.invalid" style="color:red;font-size: small;">Email is Required</span>
+    <button>LogIn</button>
+</form>
+

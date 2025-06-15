@@ -1,0 +1,8 @@
+<p>parent96 works!</p>
+<input type="text" #txtName>
+<app-child92 (emitToParent)="test('Successfully called')"></app-child92>
+<button (click)="CheckTemplateRefName(txtName.value)">Check Name</button>
+<app-child96  messageFromParent="Hi to child component">
+    <div class="test">Hi My name is Sanjeev Verma</div>
+    <div class="footer">Foot Note</div>
+</app-child96>
